@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% block userblock %}
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQLIPOC</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+   
+  
+   h2
+   {
+     text-align: center;
+   }
+   .idor
+   {
+    background-color:cornflowerblue;
+    background-image: url('/image.jpg');
+   }
+   video
+   {
+    max-width: 100%;
+    max-height: 100%;
+   }
+  </style>
+</head>
+<body>
+    <div class="idor">
+  
+      <h1 style="color:yellow;margin-left:50px">
+    INTRUSION ATTACK SCENARIOS</h1>
+    <h2 style="color:yellow; margin-left:50px">Structured Query Language Injection</h2>
+   
+
+    <p style="color: white;">
+      SQL injection is a type of cyber attack that targets the vulnerabilities in a website's database layer. It occurs when an attacker inserts malicious SQL code into input fields, such as login forms or search boxes, which are then executed by the website's database.<br>
+
+      The goal of SQL injection attacks is typically to extract sensitive information from the database, modify or delete data, or execute administrative tasks on the database server. This can lead to data breaches, loss of sensitive information, and even complete system compromise.<br>
+      
+      Video Demo <a href="https://shorturl.at/JNS48 " style="color: rgb(233, 237, 7);"> SQLI POC</a></P>
+   <b><h3 style="color: white;">Causes</h3></b>
+   <p style="color: white; font-size: medium;">
+    <b>Lack of Input Validation:</b> Web applications often accept user inputs through forms, URLs, or cookies. When these inputs are not properly validated or sanitized, attackers can inject malicious SQL code.
+<br><br>
+    <b>Dynamic SQL Queries:</b> When web applications construct SQL queries dynamically by concatenating user input with the SQL query string without proper sanitization, it creates a vulnerability. This is common in applications using string concatenation or interpolation to build SQL queries.
+<br><br>
+    <b>Insufficient Error Handling:</b> Error messages returned by the database can reveal information about the structure of the database or the SQL query being executed. Attackers can exploit poorly handled errors to deduce the structure of the database and craft malicious SQL queries accordingly.
+<br>
+  </p>
+
+  <p style="color: white; font-size: medium;">
+    In SQL injection is a prevalent vulnerabilities that attackers to exploit to gain unauthorized access to databases & SQL injection manifests in web attacks:-
+    <br>
+    <br>
+     <b>Data Extraction</b>: Attacker injects the malicious SQL code into input parameters in vulnerable web applications this injected code manipulates the SQL query executes in web application to have sensitive data as usernames & passwords , credit card numbers in databases.<br>
+     <b>Data Manipulation:</b> Used to modify/delete data within the databases by injecting the command such as “INSERT, UPDATE, DELETE” can alter contents in tables, potentially data loss.<br>
+     <b>Authentication Bypass:</b> It can exploit to bypass authentication that circumvents login checks that allows them to access restrict areas of application.
+    </p>
+    
+<p style="color: white;">To prevent SQL injection below listed are some recommendations were:<br>
+    <b>use parameterized queries: </b>instead of dynamically constructing SQL queries by concatenating the user input, that parameterized the queries by database framework. these method separates the SQL code from user input, preventing the attackers from injecting the mailicous SQL commands.
+    <br>
+      <b>principle of least astonishment: </b>design the database schema and application logic to minimize the unexpected behavior and limit the potential SQL injection vulnerabilities by use clear naming conventions and consistent coding practices to reduce the likelihood of inadvertently introducing the vulnerabilities. 
+
+  </p>
+    </div>
+
+    {% endblock %}
+</body>
+</html>

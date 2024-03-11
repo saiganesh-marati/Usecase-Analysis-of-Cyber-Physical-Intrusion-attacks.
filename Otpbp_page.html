@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+{% block userblock %}
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTPBPPOC</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+   
+   iframe
+   {
+     height: 500px;
+     width: 1500px;
+     
+   }
+   h2
+   {
+     text-align: center;
+   }
+   .idor
+   {
+    background-color:cornflowerblue;
+    background-image: url('/image.jpg');
+   }
+   video
+   {
+    max-width: 100%;
+    max-width: 100%;
+    align-items: center;
+   }
+  </style>
+</head>
+<body>
+    <div class="idor">
+   
+      <h1 style="margin-left:50px;color: yellow;">
+      
+    INTRUSION ATTACK SCENARIOS</h1>
+    <h2 style="color:yellow;margin-left:50px">One Time Password ByPass</h2>
+  <p style="color: white;">
+
+    <B>OTP Bypass</B>
+    -> This refers to the act of circumventing or bypassing the security mechanism of a one-time-passwords(OTP) system.
+    -> it is a commonly used as second factor authentication method to enhance the security of online accounts and transcations.<br>
+    -> it can occur through various mechanisms that are listed below: 
+      i) phishing: attackers trick users into providing their OTP's through phishing emails, SMS, fake websites that are usually by impersonating legitimate entities 
+      ii) vulnerabilities in OTP generation: weaknesses or vulnerabilities in OTP generation process can be exploited to predict the valid OTP's without proper authorization
+      iii) SIM swap attacks: attackers gain controllers of victims phone no by convincing the mobile carrier to transfer it to new SIM card under their control, allowing them to recieve OTP's intended for the victim.<br>
+    -> to prevent OTP bypassisng the essential to implement strong security measures such as educating the users about phishing risks
+    -> using the secure communication channels(eg HTTPS), implemting the multi-fcator authentication (MFA) with additional factors besides OTP updating & patching the systems to address vulnerabilities 
+    -> below are the recommendations for OTP bypassing:<br>
+      i) Phishing: Attackers create fake login pages that mimic legitimate websites and trick users into entering their credentials, including the second factor (such as OTP), once users submitted their information attackers can use it to access their accounts.
+      ii) Session Hijacking: If there are vulnerabilities in the session management process, attackers can hijack authenticated sessions after users have successful completed the 2FA process, allows them to access account without needing to provide second factor again.
+      iii) Brute Force Hijacking: Attackers may attempt to guess the second factor, especially if it’s a weak or easily guessable code then there is no limitations on the number of attempts.
+       iv) Man-In-The-Middle (MITM) Attack: Intercepting and manipulating communications between user & authentication server can allow attackers to bypass 2FA by capturing and replaying authentication tokens.
+        v) Reverse Proxy Attacks: Exploiting vulnerabilities in reverse proxy configurations that controls can allow attackers to bypass 2FA protections and gain  access to the backend systems directly.
+    
+      
+      Video Demo <a href="https://shorturl.at/jwyX7" style="color: rgb(233, 237, 7);"> OTPBYPASS POC</a></p>
+  <p style="color: white;"> <b>Causes</b><br>
+
+    <b>Lack of Proper Authorization Checks:</b> The primary cause of IDOR vulnerabilities is the absence of proper authorization checks on user requests. If the application doesn't verify whether the user is authorized to access a particular object or resource, it becomes vulnerable to IDOR attacks.<br>
+    <b>Predictable Object References:</b> If an application uses predictable or sequential identifiers for its internal objects, such as numeric IDs or incrementing values, attackers can easily guess or manipulate these identifiers to access unauthorized resources.<br>
+    <b>Insecure Direct Object References in URLs:</b> Exposing internal object references directly in URLs or other client-side parameters can lead to IDOR vulnerabilities. Attackers can modify these parameters to access resources they're not supposed to access.
+  </p>
+    </div>
+    {% endblock %}
+</body>
+</html>

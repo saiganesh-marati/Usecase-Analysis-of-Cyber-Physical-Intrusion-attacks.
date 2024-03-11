@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+
+{% block userblock %}
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDORPOC</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+   
+   iframe
+   {
+     height: 500px;
+     width: 1500px;
+     
+   }
+   h2
+   {
+     text-align: center;
+   }
+   .idor
+   {
+    background-color:rgb(5, 56, 149);
+    background-image: url('/image.jpg');
+   }
+  </style>
+</head>
+<body>
+    <div class="idor">
+      
+      <h1 style="color:yellow;margin-left:50px">
+    INTRUSION ATTACK SCENARIOS</h1>
+    <h2 style="color:yellow;margin-left:50px">Insecure Direct Object Reference</h2>
+
+  <P style="color: white;">Insecure Direct Object Reference (IDOR) is a type of security vulnerability that occurs when a web application exposes internal implementation objects or resources directly to users without proper authorization checks. Essentially, it allows attackers to access sensitive data or functionality by manipulating object references (such as file names, database keys, or URLs) in a predictable or unauthorized manner.<br>
+
+    IDOR vulnerabilities typically arise due to inadequate access controls, where the application fails to validate whether a user has the necessary permissions to access a particular resource. As a result, attackers can exploit these weaknesses to access unauthorized data or perform actions on behalf of other users.<br>
+    Video Demo <a href="https://shorturl.at/szCZ9 " style="color: rgb(233, 237, 7);"> IDOR POC</a></P>
+  <p style="color: white;"> <b>Causes</b><br>
+
+    <b>Lack of Proper Authorization Checks:</b> The primary cause of IDOR vulnerabilities is the absence of proper authorization checks on user requests. If the application doesn't verify whether the user is authorized to access a particular object or resource, it becomes vulnerable to IDOR attacks.<br>
+
+    <b>Predictable Object References:</b> If an application uses predictable or sequential identifiers for its internal objects, such as numeric IDs or incrementing values, attackers can easily guess or manipulate these identifiers to access unauthorized resources.<br>
+
+    <b>Insecure Direct Object References in URLs:</b> Exposing internal object references directly in URLs or other client-side parameters can lead to IDOR vulnerabilities. Attackers can modify these parameters to access resources they're not supposed to access.
+  </p>
+
+
+  <br>
+
+  <p style="color: white;"> <b>Recommendations</b><br>
+
+    <b>Implement Proper Access Controls:</b> Ensure that your web application enforces proper access controls based on user roles and permissions. Use authentication and authorization mechanisms to restrict access to sensitive resources.
+   
+    <b>Use Indirect Object References:</b> Avoid exposing direct object references in URLs or API endpoints. Instead, use indirect references like unique identifiers or tokens that cannot be easily guessed or manipulated.
+    <br>
+    <b>Validate User Input:</b> Validate and sanitize all user inputs to prevent injection attacks, including IDOR attacks. Use server-side validation to verify that users have access to requested resources before serving them.
+  </p>
+    </div>
+    
+      
+  
+
+    {% endblock %}
+</body>
+</html>
