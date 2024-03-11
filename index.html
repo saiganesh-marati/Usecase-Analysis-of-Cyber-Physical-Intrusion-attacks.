@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    h1{
+        text-align: center;
+    }
+    .b2
+    {
+        background-image:url('https://www.simplilearn.com/ice9/free_resources_article_thumb/Use_Cases_for_Cyber_Security.jpg');
+        background-repeat: no-repeat;
+        background-size: contain
+        
+    }
+    .titlecs{
+border-style:solid;
+height:100px;
+width:1300px;
+background:rgba(178,34,34,.8);
+margin-left:20px;
+}
+
+.right-side {
+    flex: 2;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+
+  .b1
+  {
+    flex: 1;
+    padding: 0px;
+    background-color:white;
+  }
+
+  .container {
+    display: flex;
+    background-color: white;
+  }
+  body{
+    
+    margin: 0;
+      padding: 0;
+      background-image: url('/templates/cmatrix.gif');
+      background-size: cover; /* Adjust this according to your needs */
+      background-repeat: no-repeat;
+
+
+  }
+  </style>
+</head>
+<body>
+    
+        
+    <div class="titlecs">
+            <h1 style="color:yellow;margin-left:50px">
+             USE CASE ANALYSIS OF CYBER PHYSICAL INTRUSION ATTACKS</h1>
+            </div>
+
+<div class="container">
+    <div class="b1">
+    <p>PROOF OF CONCEPTS</p>
+    <ol>
+        <li>
+            <a href="{%url 'idor_page'%}" target="_blank">IDOR</a><br>
+        </li>
+
+        <br>
+        <br>
+        <li>
+            <a href="{%url 'xss_page'%}" target="_blank">XSS</a><br>
+        </li>
+
+        <br>
+        <br>
+        
+        <li>
+            <a href="{%url 'Sqli_page'%}" target="_blank">SQLI</a><br>
+        </li>
+
+        <br>
+        <br>
+
+        
+        <li>
+            <a href="iframe_page.html" target="_blank">SSRF</a><br>
+        </li>
+
+
+        <br>
+        <br>
+
+        
+        <li>
+            <a href="iframe_page.html" target="_blank">Host Header Injection</a><br>
+        </li>
+
+        <br>
+        <br>
+
+        
+        <li>
+            <a href="{%url 'Otpbp_page'%}" target="_blank">OTP BYPASS</a><br>
+        </li>
+
+
+        <BR>
+            <BR>
+
+        
+        <li>
+            <a href="iframe_page.html" target="_blank">Directory listing</a><br>
+        </li>
+
+
+        <BR>
+            <BR>
+
+        
+        <li>
+            <a href="{%url 'Htmli_page'%}" target="_blank" style="color: blue;">HTML Injection</a><br>
+        </li>
+
+
+        
+      
+
+
+
+    </ol>
+    </div>
+
+  
+
+
+  <div class="right-side">
+    <h2>Web Application vulnerabilities</h2>
+    <p>Web application security vulnerabilities refer to weaknesses or flaws in web applications that can be exploited by attackers to compromise the security and integrity of the application, its data, and potentially the underlying systems. These vulnerabilities can range from simple coding errors to complex design flaws and can have serious consequences if left unaddressed.
+    Web application security vulnerabilities are of paramount importance in today's digital landscape due to several reasons:
+
+</p><p><b>Data Breaches:</b> Vulnerabilities in web applications can lead to data breaches, exposing sensitive user information such as personal data, financial details, or login credentials. Such breaches not only compromise user privacy but also tarnish the reputation of the organization responsible for the application.</p>
+<p><b>Financial Loss: </b>Exploiting security vulnerabilities can result in financial losses for both users and organizations. For users, it may lead to unauthorized transactions or identity theft, while for organizations, it can involve legal fees, regulatory fines, and loss of revenue due to downtime or decreased customer trust.</p>
+
+<p><b>Reputation Damage: </b>Security breaches can severely damage the reputation of an organization. Once news of a security incident spreads, users lose trust in the affected application and may switch to competitors' services. Rebuilding trust takes time and substantial effort.</p>
+
+<p><b>Legal and Regulatory Consequences: </b>Many industries have stringent regulations regarding data protection and privacy, such as GDPR (General Data Protection Regulation) in the European Union or HIPAA (Health Insurance Portability and Accountability Act) in the healthcare sector. Failure to comply with these regulations due to security vulnerabilities can result in significant legal penalties.</p>
+
+<p><b>Disruption of Service: </b>Security vulnerabilities can be exploited to disrupt the normal functioning of web applications through techniques like denial-of-service (DoS) attacks. This can result in downtime, loss of productivity, and frustration among users.</p>
+
+<p><b>Compromised Business Assets: </b>Web applications often handle critical business assets such as intellectual property, trade secrets, or proprietary algorithms. A security breach can compromise these assets, leading to competitive disadvantage or loss of market position.</p>
+
+<p><b>Customer Trust and Loyalty: </b>Security vulnerabilities erode customer trust and loyalty. Users expect the applications they use to be secure and reliable. When vulnerabilities are exploited, it undermines this trust, leading to user dissatisfaction and potential churn.</p>
+ </p>
+  </div>
+</div>
+
+</body>
+</html>
