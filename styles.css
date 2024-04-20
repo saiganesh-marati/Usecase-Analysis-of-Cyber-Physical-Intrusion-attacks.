@@ -1,0 +1,7 @@
+.background-image {
+    background-image: url('/Use_Cases_for_Cyber_Security.avif'); /* Path to your image file */
+    background-size: cover; /* This property ensures that the image covers the entire background */
+    background-position: center; /* Center the background image */
+    /* You can add more styling here as needed */
+  }
+  
