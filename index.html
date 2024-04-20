@@ -49,6 +49,7 @@ margin-left:20px;
     margin: 0;
       padding: 0;
       background-image: url('/templates/cmatrix.gif');
+      background-image: url("{% static 'image.jpg' %}");
       background-size: cover; /* Adjust this according to your needs */
       background-repeat: no-repeat;
 
@@ -90,7 +91,7 @@ margin-left:20px;
 
         
         <li>
-            <a href="iframe_page.html" target="_blank">SSRF</a><br>
+            <a href="{%url 'ssrf_page'%}" target="_blank">SSRF</a><br>
         </li>
 
 
@@ -99,7 +100,7 @@ margin-left:20px;
 
         
         <li>
-            <a href="iframe_page.html" target="_blank">Host Header Injection</a><br>
+            <a href="{%url 'hhi_page'%}" target="_blank">Host Header Injection</a><br>
         </li>
 
         <br>
@@ -116,7 +117,7 @@ margin-left:20px;
 
         
         <li>
-            <a href="iframe_page.html" target="_blank">Directory listing</a><br>
+            <a href="{%url 'pt_page'%}" target="_blank">Parameter tamparing</a><br>
         </li>
 
 
@@ -160,6 +161,6 @@ margin-left:20px;
  </p>
   </div>
 </div>
-
+{%endblock % }
 </body>
 </html>

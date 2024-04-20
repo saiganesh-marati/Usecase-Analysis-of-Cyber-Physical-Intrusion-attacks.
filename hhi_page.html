@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+
+{% block userblock %}
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HHI POC</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+   
+   iframe
+   {
+     height: 500px;
+     width: 1500px;
+     
+   }
+   h2
+   {
+     text-align: center;
+   }
+   .xss
+   {
+    background-color:rgb(0, 72, 205);
+    background-image: url("{% static 'image.jpg' %}");
+   }
+  </style>
+</head>
+<body>
+    <div class="xss">
+      
+      <h1 style="color:yellow;margin-left:50px">
+    INTRUSION ATTACK SCENARIOS</h1>
+    <h2 style="color:yellow;margin-left:50px">Host Header Injection</h2>
+
+  <P style="color: white;">Host header injection is a web security vulnerability that occurs when an attacker is able to manipulate or inject malicious content into the Host header of an HTTP request. This vulnerability can lead to various attacks, including cache poisoning, server-side request forgery (SSRF), and cross-site scripting (XSS).<br>
+
+    The Host header is part of the HTTP protocol and is used by the client (usually a web browser) to specify the host and port to which the request is being sent. For example, in the URL https://example.com/path, the Host header would be example.com.<br>
+
+    Host header injection occurs when an attacker can manipulate the Host header value by sending a specially crafted HTTP request. This manipulation can be achieved through various means, such as modifying the Host header directly or exploiting vulnerable components that allow user-controlled input to be included in the Host header.<br>
+Host header injection is a serious security issue that can have various consequences depending on the context of the application. It's essential for developers to be aware of this vulnerability and take appropriate measures to mitigate the risk.<br>
+    Video Demo <a href="https://shorturl.at/kstyV" style="color: yellow;">HHI POC</a></P>
+    <iframe src="https://drive.google.com/file/d/1OVfEdsLxhyZPo7Jas11rC_kvURphjPjo/preview" width="640" height="480" allow="autoplay"></iframe>
+  <p style="color: white;"> <b>Causes</b><br>
+
+    <b>Cache Poisoning:  </b>  By manipulating the Host header, an attacker may be able to poison caching systems. If the server responds to the manipulated Host header with sensitive information or authentication tokens, this information could be cached and served to other users who visit the same URL with the manipulated Host header.<br>
+    <br>
+    <b>Session Fixation:</b> If the server relies on the Host header to establish or maintain user sessions, an attacker may be able to manipulate this header to fixate a session identifier, allowing them to hijack user sessions.<br>
+    <br>
+    <b>Web Cache Deception: </b> Attackers can abuse host header injection to trick web caches into caching content that is intended for a different domain. This could lead to the disclosure of sensitive information or unauthorized access to resources.
+  </p>
+
+
+  <br>
+
+  <p style="color: white;"> <b>Recommendations</b><br>
+
+    <b>Input Validation: </b>  Implement strict input validation to ensure that user-supplied data conforms to expected formats and does not contain malicious code. Use whitelisting techniques to only allow known safe inputs.<br>
+    <br>
+    <b>HTTP Host Header Validation:  </b>  Implement server-side validation of the Host header to ensure it matches the expected hostname for the application. Reject requests with mismatched or invalid host headers.<br><br>
+    <b>Content Security Policy (CSP):</b> Enforce a strict CSP to restrict the sources from which resources (scripts, stylesheets, etc.) can be loaded. This can mitigate the impact of host header injection by preventing the execution of injected scripts or resources.
+  </p>
+
+  
+  <p style="color: white;">
+    <b>Articles related to HHI</b>
+    <ol style="color: white;">
+      <li>
+         <a href="https://shorturl.at/kpLOU" style="color: white;">Host Header Injection Attacks</a>
+      </li>
+        <br>
+      <li>
+        <a href="https://shorturl.at/tyNW4"style="color: white;">THow i found Host header injection/attack/redirection INR 329 billion Company E-commerce site </a>
+      </li>
+      <br>
+      <li>
+        <a href="https://shorturl.at/jtB58" style="color: white;">Identifying & Escalating HTTP Host Header Injection attacks</a>
+     </li>
+       <br>
+     <li>
+       <a href="https://shorturl.at/abpxA"style="color: white;">How I was able to take over any users account with host header injection</a>
+     </li>
+    </ol>
+</p>
+    </div>
+    
+      
+  
+
+    {% endblock %}
+</body>
+</html>

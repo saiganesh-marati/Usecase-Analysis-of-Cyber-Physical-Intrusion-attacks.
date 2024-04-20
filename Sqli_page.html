@@ -16,8 +16,8 @@
    }
    .idor
    {
-    background-color:cornflowerblue;
-    background-image: url('/image.jpg');
+    background-color:rgb(0, 72, 205);
+    background-image: url("{% static 'image.jpg' %}");
    }
    video
    {
@@ -40,6 +40,7 @@
       The goal of SQL injection attacks is typically to extract sensitive information from the database, modify or delete data, or execute administrative tasks on the database server. This can lead to data breaches, loss of sensitive information, and even complete system compromise.<br>
       
       Video Demo <a href="https://shorturl.at/JNS48 " style="color: rgb(233, 237, 7);"> SQLI POC</a></P>
+      <iframe src="https://drive.google.com/file/d/1Z1mqUv1taHmHRd1iRCXYQSNAf27aZvbA/preview" width="1440" height="580" allow="autoplay"></iframe>
    <b><h3 style="color: white;">Causes</h3></b>
    <p style="color: white; font-size: medium;">
     <b>Lack of Input Validation:</b> Web applications often accept user inputs through forms, URLs, or cookies. When these inputs are not properly validated or sanitized, attackers can inject malicious SQL code.
@@ -59,12 +60,34 @@
      <b>Authentication Bypass:</b> It can exploit to bypass authentication that circumvents login checks that allows them to access restrict areas of application.
     </p>
     
-<p style="color: white;">To prevent SQL injection below listed are some recommendations were:<br>
-    <b>use parameterized queries: </b>instead of dynamically constructing SQL queries by concatenating the user input, that parameterized the queries by database framework. these method separates the SQL code from user input, preventing the attackers from injecting the mailicous SQL commands.
+<p style="color: white;"><b>Recommendations</b><br>
+    <b>Use parameterized queries: </b>instead of dynamically constructing SQL queries by concatenating the user input, that parameterized the queries by database framework. these method separates the SQL code from user input, preventing the attackers from injecting the mailicous SQL commands.
     <br>
-      <b>principle of least astonishment: </b>design the database schema and application logic to minimize the unexpected behavior and limit the potential SQL injection vulnerabilities by use clear naming conventions and consistent coding practices to reduce the likelihood of inadvertently introducing the vulnerabilities. 
+    <br>
+      <b>Principle of least astonishment: </b>design the database schema and application logic to minimize the unexpected behavior and limit the potential SQL injection vulnerabilities by use clear naming conventions and consistent coding practices to reduce the likelihood of inadvertently introducing the vulnerabilities. 
 
   </p>
+
+  <p style="color: white;">
+    <b>Articles related to SQLI</b>
+    <ol style="color: white;">
+      <li>
+         <a href="https://shorturl.at/sDZ45" style="color: white;">Javascript Analysis to SQL injection</a>
+      </li>
+        <br>
+      <li>
+        <a href="https://shorturl.at/lzAT9"style="color: white;">Secure Java Coding: Preventing SQL Injection and Other Attacks</a>
+      </li>
+      <br>
+      <li>
+        <a href="https://shorturl.at/nDW79" style="color: white;">Blog Post: Bypassing an Admin Panel with SQL Injection</a>
+     </li>
+       <br>
+     <li>
+       <a href="https://shorturl.at/foPTU"style="color: white;">Protecting Your C# Entity Framework Application from SQL Injection</a>
+     </li>
+    </ol>
+</p>
     </div>
 
     {% endblock %}

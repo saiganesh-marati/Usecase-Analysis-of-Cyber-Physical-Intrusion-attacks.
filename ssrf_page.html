@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+
+{% block userblock %}
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSRF POC</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+   
+   iframe
+   {
+     height: 500px;
+     width: 1500px;
+     
+   }
+   h2
+   {
+     text-align: center;
+   }
+   .idor
+   {
+    background-color:rgb(0, 72, 205);
+    background-image: url('/image.jpg');
+    background-image: url("{% static 'image.jpg' %}");
+   }
+  </style>
+</head>
+<body>
+    <div class="idor">
+      
+      <h1 style="color:yellow;margin-left:50px">
+    INTRUSION ATTACK SCENARIOS</h1>
+    <h2 style="color:yellow;margin-left:50px">Server Side Request Forgery</h2>
+
+  <P style="color: white;">SSRF stands for Server-Side Request Forgery. It's a type of security vulnerability that occurs when an attacker is able to make a server-side application perform requests on their behalf. In SSRF attacks, the attacker can typically manipulate the server into making requests to other resources or services, including those internal to the network that the server resides in, or even external resources on the internet.<br>
+
+    The consequences of SSRF attacks can vary, but they often include unauthorized access to sensitive data, bypassing security controls, or exploiting internal systems that should not be directly accessible from the internet.
+    <br>
+    SSRF vulnerabilities are typically exploited through user-controlled input, such as URL parameters, file uploads, or API requests, which are not properly validated or sanitized by the server-side application. To prevent SSRF attacks, it's crucial for developers to validate and restrict the types of URLs or resources that the server can access, implement proper input validation, and employ security measures such as network firewalls and access controls.
+    
+    
+    <br>
+    Video Demo <a href="https://shorturl.at/iyGV3" style="color: rgb(233, 237, 7);"> SSRF POC</a></P>
+    <iframe src="https://drive.google.com/file/d/1Vqx41YdRJOY2ovyWzlB48ASU1ZEic_86/preview" width="640" height="480" allow="autoplay"></iframe>
+  <p style="color: white;"> <b>Causes</b><br>
+
+    <b>Direct Access to Resources:</b> Allowing the server to directly access internal resources or services without appropriate authentication or authorization mechanisms can create opportunities for SSRF vulnerabilities.<br>
+<br>
+    <b>Trust in User-Controlled Data: </b> Blindly trusting user-supplied data, such as URLs for external resources, without verifying their authenticity or ensuring that they do not point to sensitive internal systems, can lead to SSRF vulnerabilities.<br>
+    <br>
+    <b>Misuse of Server-Side Features: </b>  Certain server-side features or functionalities, such as URL redirections, can be misused by attackers to perform SSRF attacks if not properly implemented or secured.
+  </p>
+
+
+  <br>
+
+  <p style="color: white;"> <b>Recommendations</b><br>
+
+    <b>Use Safe APIs:</b> Prefer the use of safe APIs that enforce proper authentication and authorization mechanisms. Avoid exposing internal services directly to user-controlled input.
+    <br>
+    <br>
+    <b>Access Controls:</b> Enforce strong access controls and least privilege principles to limit the server's ability to access sensitive resources or perform certain actions.
+    <br>
+    <br>
+    <b>Proxy or Reverse Proxy: </b> Implement a proxy or reverse proxy server to handle outgoing requests, enabling centralized control and inspection of requests made by the server, and blocking requests to unauthorized destinations.
+  </p>
+
+
+  <p style="color: white;">
+      <b>Articles related to SSRF</b>
+      <ol style="color: white;">
+        <li>
+           <a href="https://shorturl.at/ajXZ5" style="color: white;">Circumventing Common SSRF Defenses: A Deep Dive into Strategies and Techniques</a>
+        </li>
+          <br>
+        <li>
+          <a href="https://shorturl.at/AJW48"style="color: white;">In-Depth Analysis of Server-Side Request Forgery (SSRF) Vulnerabilities</a>
+        </li>
+        <br>
+        <li>
+          <a href="https://shorturl.at/eDLT4" style="color: white;">My SSRF Tricks — Bug Bounty Tuesday</a>
+       </li>
+         <br>
+       <li>
+         <a href="https://shorturl.at/erB25"style="color: white;">Some tips to earn your first bounty to find XSS,Blind-XSS,SQLI,SSRF,LFI,LOG4J using some handy automation tools.</a>
+       </li>
+      </ol>
+  </p>
+    </div>
+    
+      
+  
+
+    {% endblock %}
+</body>
+</html>

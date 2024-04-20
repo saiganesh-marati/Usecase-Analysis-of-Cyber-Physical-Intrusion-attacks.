@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+{% block userblock %}
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT POC</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+   
+   iframe
+   {
+     height: 500px;
+     width: 1500px;
+     
+   }
+   h2
+   {
+     text-align: center;
+   }
+   .idor
+   {
+    background-color:rgb(0, 72, 205);
+    background-image: url("{% static 'image.jpg' %}");
+   }
+   video
+   {
+    max-width: 100%;
+    max-width: 100%;
+    align-items: center;
+   }
+  </style>
+</head>
+<body>
+    <div class="idor">
+   
+      <h1 style="margin-left:50px;color: yellow;">
+      
+    INTRUSION ATTACK SCENARIOS</h1>
+    <h2 style="color:yellow;margin-left:50px">Parameter Tampering</h2>
+  <p style="color: white;">
+
+    
+Parameter tampering vulnerability is a type of security flaw that occurs when an attacker manipulates parameters in a web application's URL or form fields to gain unauthorized access to resources, bypass authentication, escalate privileges, or perform other malicious activities.<br>
+
+This vulnerability typically arises due to improper input validation or insufficient server-side validation of user-supplied data. Attackers exploit this weakness by modifying parameters such as query strings, hidden fields, or cookies in HTTP requests sent to the server.<br>
+    
+      
+      Video Demo <a href="https://shorturl.at/efN68" style="color: rgb(233, 237, 7);">Parameter Tampering POC</a></p>
+      <iframe src="https://drive.google.com/file/d/1OMj_JbhCzwH4-pivI8QEs0QY0vW56EDq/preview" width="640" height="480" allow="autoplay"></iframe>
+  <p style="color: white;"> <b>Causes</b><br>
+
+    <b>Insufficient Input Validation:</b>  Failure to properly validate and sanitize user-supplied input leaves the application vulnerable to parameter manipulation. If the server trusts the input received from the client without adequate validation, attackers can exploit this weakness.<br>
+    <br>
+    <b>Weak Server-Side Validation:</b> Inadequate validation of parameters on the server-side allows attackers to bypass security controls. This can happen when the server fails to verify the integrity of the data received from the client or relies solely on client-side validation, which can be easily bypassed.<br><br>
+    <b>Predictable or Sequential Parameter Values:</b> If parameter values are predictable or follow a sequential pattern, attackers can manipulate them to access unauthorized resources or escalate privileges. For example, if user IDs or session tokens are easily guessable, attackers can tamper with them to impersonate other users or gain unauthorized access.
+  </p>
+  <p style="color: white;"><b>Recommendations</b><br>
+    <b>Input Validation: : </b>Implement strict input validation on both the client and server sides to ensure that parameters are properly sanitized and validated before processing. Use whitelisting techniques to allow only expected input and reject any unauthorized or unexpected values.
+    <br>
+    <br>
+      <b>Server-Side Validation: </b>Perform validation and integrity checks on parameters at the server-side to prevent manipulation of data by attackers. Avoid relying solely on client-side validation, as it can be bypassed.
+<br><br>
+      <b>Parameter Encryption: </b> Encrypt sensitive parameters before transmitting them over the network. This adds an extra layer of protection against parameter tampering and data interception.<br>
+
+  </p>
+
+  <p style="color: white;">
+    <b>Articles related to Parameter Tampering</b>
+    <ol style="color: white;">
+      <li>
+         <a href="https://shorturl.at/klqx5" style="color: white;">Shopping Products For Free- Parameter Tampering Vulnerability</a>
+      </li>
+        <br>
+      <li>
+        <a href="https://shorturl.at/CPRS1"style="color: white;">What is Parameter Tampering</a>
+      </li>
+      <br>
+      <li>
+        <a href="https://shorturl.at/WZ034" style="color: white;">Parameter Tampering</a>
+     </li>
+       <br>
+     <li>
+       <a href="https://shorturl.at/avOR4"style="color: white;">How to prevent Web Parameter Tampering</a>
+     </li>
+    </ol>
+</p>
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -23,8 +23,9 @@
    }
    .xss
    {
-    background-color:rgb(5, 56, 149);
+    background-color:rgb(0, 72, 205);
     background-image: url('/image.jpg');
+    background-image: url("{% static 'image.jpg' %}");
    }
   </style>
 </head>
@@ -42,11 +43,14 @@
 Stored XSS: The injected script is permanently stored on the server and served to every user who visits the affected page.<br>
 Reflected XSS: The injected script is reflected off the web server and executed in the victim's browser as part of the response to a user-initiated request (e.g., via a URL parameter).<br>
 DOM-based XSS: The vulnerability arises within the client-side JavaScript code by manipulating the Document Object Model (DOM) directly.<br>
-    Video Demo <a href="https://shorturl.at/aEIMN " style="color: white;">XSS POC</a></P>
+    Video Demo <a href="https://shorturl.at/aEIMN " style="color: yellow;">XSS POC</a></P>
+    <iframe src="https://drive.google.com/file/d/16nc4Rk_k0CEmKXzF5QG42LA3Ydj_GGfh/preview" width="640" height="480" allow="autoplay"></iframe>
   <p style="color: white;"> <b>Causes</b><br>
 
     <b>Improper Input Validation: </b> Failure to properly validate user inputs, such as form fields, URL parameters, or HTTP headers, can allow attackers to inject malicious scripts into the application.<br>
+    <br>
     <b>Lack of Output Encoding:</b> When developers fail to encode or sanitize user-generated content before displaying it in web pages, attackers can exploit this vulnerability to inject and execute malicious scripts.<br>
+    <br>
     <b>Insecure Third-Party Components:</b> Including third-party libraries, plugins, or scripts in web applications without vetting their security can introduce XSS vulnerabilities if these components are not properly maintained or updated.
   </p>
 
@@ -56,9 +60,32 @@ DOM-based XSS: The vulnerability arises within the client-side JavaScript code b
   <p style="color: white;"> <b>Recommendations</b><br>
 
     <b>Input Validation: </b>  Implement strict input validation to ensure that user-supplied data conforms to expected formats and does not contain malicious code. Use whitelisting techniques to only allow known safe inputs.<br>
-    <b>Output Encoding: </b> Encode or sanitize all user-generated content before displaying it in web pages to prevent XSS attacks. Use libraries or frameworks that automatically handle output encoding to minimize human error.<br>
+    <br>
+    <b>Output Encoding: </b> Encode or sanitize all user-generated content before displaying it in web pages to prevent XSS attacks. Use libraries or frameworks that automatically handle output encoding to minimize human error.<br><br>
     <b>Content Security Policy (CSP):</b> Implement CSP headers to specify which sources of content are allowed to be loaded by the web browser. CSP can help mitigate the impact of XSS attacks by blocking unauthorized scripts from executing.
   </p>
+
+  
+  <p style="color: white;">
+    <b>Articles related to XSS</b>
+    <ol style="color: white;">
+      <li>
+         <a href="https://shorturl.at/bJLY2" style="color: white;">How I Found Multiple XSS Vulnerabilities Using Unknown Techniques</a>
+      </li>
+        <br>
+      <li>
+        <a href="https://shorturl.at/tBIK7"style="color: white;">The Threat of DOM-based Cross-Site Scripting (XSS) Protecting Your Web Applications</a>
+      </li>
+      <br>
+      <li>
+        <a href="https://shorturl.at/ewBI0" style="color: white;">“Hunting the Wild A Guide to Finding Hidden XSS Vulnerabilities”</a>
+     </li>
+       <br>
+     <li>
+       <a href="https://shorturl.at/vKS29"style="color: white;">Mass Hunting Blind XSS — Initial Setup</a>
+     </li>
+    </ol>
+</p>
     </div>
     
       
